@@ -47,8 +47,12 @@ intro: software development kit
 
 - allocation, attach, and release
   - allocation (prepare a receiving buffer):
-      - method 1: dcambuf_alloc() -> dcambuf_lockframe()/dcambuf_copyframe(). allocate the frame buffer in the DCAM module -> access the data or copy the data
-      - method 2: dcambuf_attach(). attach a momery buffer and the image will be written to the user buffer (may not be supported)
+      - method 1: dcambuf_alloc() -> dcambuf_lockframe()/dcambuf_copyframe() -> dcambuf_release(). allocate the frame buffer in the DCAM module -> access the data or copy the data -> release the internal receiving buffer in the DCAM module
+      - method 2: dcambuf_attach() -> dcambuf_release(). attach a momery buffer and the image will be written to the user buffer (may not be supported) -> detach the memory
+
+- lockframe and copyframe
+  - dcambuf_lockframe(): return a pointer to the data so we can access the image
+  - dcambuf_copyframe(): copy the image from primary buffer to reserved memory 
 
 ## capture control
 
