@@ -43,3 +43,17 @@ intro: software development kit
   - steps: prepare HDCAMREC handle -> call dcamcap_record() -> call dcamcap_start()
   - one time function: call dcamcap_record() again for another capturing
   
+## recording control
+
+- prepare, start, and stop recording
+  - open decam recording file -> call recoding function -> call dcam start function 
+  - function: dcamrec_open() -> call dcamcap_record() when in READY state -> call dcamcap_start() -> call dcamrec_close() (if not calling the last function, some data may be lost)
+
+- pause, resume, and status
+  - pause the disk recorder: dcamrec_pause()
+  - resume the disk recording during capturing, dcamrec_resume()
+  - get recording status: dcamrec_status(). The recording is in process when the flag is DCAMREC_STATUSFLAG_RECORDING
+
+- access image data
+  - access the recorded frames: dcamrec_lockframe() or dcamrec_copyframe()
+  - not recommend during a recording
