@@ -19,3 +19,12 @@ then install all install.sh files in apt, runtime, driver and follow the guideli
 ## install DCAM-SDK
 
 intro: software development kit
+
+## capture control
+
+- start and stop capturing
+  - allocate a buffer -> start decam capture -> stop decam capture
+  - function: decambuf_alloc() -> decamcap_start() -> decamcap_stop()
+  - misc: 
+    - continous capturing - DACAMCAP_START_SEQUENCE: when the capturing reaches the final allocated frame, it will go back to the first frame and overwritten the existing data.
+    - single cycle capturing - DCAMCAP_START_SNAP: the capture stops when the capturing reaches the final allocated frame.
