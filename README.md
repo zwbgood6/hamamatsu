@@ -20,6 +20,22 @@ then install all install.sh files in apt, runtime, driver and follow the guideli
 
 intro: software development kit
 
+# DCAM API modules
+
+## initialization, termination, HDCAM handle
+
+- initialization
+  - begin DCAM-API and initialize driver -> get HDCAM handle for the device 
+  - functions: dcamapi_init() -> dcamdev_open()
+  - dcamapi_init(): 
+    - DCAMAPI_INIT: choose initialization options; iDeviceCount show how many devices are connected
+  - dcamdev_open():
+    - DCAMDEV_OPEN: choose a device by index (0 - IDeviceCount-1)
+
+- termination
+  - close the HDCAM handle -> 
+  
+  
 ## capture control
 
 - start and stop capturing
