@@ -25,7 +25,7 @@ intro: software development kit
 ## initialization, termination, HDCAM handle
 
 - initialization
-  - begin DCAM-API and initialize driver -> get HDCAM handle for the device 
+  - steps: begin DCAM-API and initialize driver -> get HDCAM handle for the device 
   - functions: dcamapi_init() -> dcamdev_open()
   - dcamapi_init(): 
     - DCAMAPI_INIT: choose initialization options; iDeviceCount show how many devices are connected
@@ -33,9 +33,22 @@ intro: software development kit
     - DCAMDEV_OPEN: choose a device by index (0 - IDeviceCount-1)
 
 - termination
-  - close the HDCAM handle -> 
-  
-  
+  - close the HDCAM handle: dcamdev_close()
+  - terminate the API and unload all of the modules: dcamapi_uninit()
+
+- HDCAM handle
+  - handle is the device on HDCAM-API
+  - handle specifies the camera
+
+- get the device and DCAM information 
+  - dcamdev_getstring()
+
+## acquisition buffer control
+
+- allocation, attach, and release
+  - allocation:
+    - steps: 
+
 ## capture control
 
 - start and stop capturing
