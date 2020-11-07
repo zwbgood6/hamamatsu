@@ -35,5 +35,11 @@ intro: software development kit
   - VIP: call these function after the arrival of new frames to release the burden for CPU
   
 - software trigger
+  - use software trigger: set DCAMPROP_TRIGGERSOURCE_SOFTWARE to DCAM_IDPROP_TRIGGERSOURCE, and start capturing
+  - DCAM modules fires a trigger to device, it will wait until the camera is ready to receive the trigger signal: dcamcap_firetrigger()
   
+- recording
+  - record images to disk simultaneously while capturing
+  - steps: prepare HDCAMREC handle -> call dcamcap_record() -> call dcamcap_start()
+  - one time function: call dcamcap_record() again for another capturing
   
