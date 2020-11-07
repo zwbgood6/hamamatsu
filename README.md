@@ -46,8 +46,9 @@ intro: software development kit
 ## acquisition buffer control
 
 - allocation, attach, and release
-  - allocation:
-    - steps: 
+  - allocation (prepare a receiving buffer):
+      - method 1: dcambuf_alloc() -> dcambuf_lockframe()/dcambuf_copyframe(). allocate the frame buffer in the DCAM module -> access the data or copy the data
+      - method 2: 
 
 ## capture control
 
