@@ -8,9 +8,9 @@ linux version: `18.04` (don't use 20.04).
 
 camara type: `C12300-321B`.
 
-Install the latest gcc, 
+Install the latest `gcc`, 
 
-check if gcc version: 'gcc --version',
+check gcc version: `gcc --version`,
 
 if you don't have `gcc`, run
 
@@ -18,11 +18,13 @@ if you don't have `gcc`, run
 
 Install the linux-headers: 
 
-`sudo apt get linux-headers-1.14.0-1100-oem` (should be this version when you boot the computer - ubuntu advanced option).
+`sudo apt get linux-headers-4.15.0-1100-oem` (should be this version when you boot the computer - ubuntu advanced option).
 
 Go to BIOS when rebooting, disable the `secutiry boot`, enable `legacy support`.
 
-Then install all install.sh files in apt, runtime, driver and follow the guideline in the pdf.
+Then install all `install.sh` files in apt, runtime, driver and follow the guideline in the pdf.
+
+Read the `FireBird_QuickStart_Linux.pdf` file in the directory ``.
 
 ## install DCAM-SDK
 
