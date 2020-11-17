@@ -22,9 +22,9 @@ Install the linux-headers:
 
 Go to BIOS when rebooting, disable the `secutiry boot`, enable `legacy support`.
 
-Then install all `install.sh` files in apt, runtime, driver and follow the guideline in the pdf.
+Then install all `install.sh` files in apt, runtime, driver and follow the guidelines in the `README.txt`.
 
-Read the `FireBird_QuickStart_Linux.pdf` file in the directory ``.
+Read the `FireBird_QuickStart_Linux.pdf` file in the directory `DCAM-API_for_Linux_v4.0.5868_r2/DCAM-API_for_Linux_v4.0.5868/api/driver/firebird/as-dcam-lin64-8.13.3/as-dcam-lin64-8.13.3-1`.
 
 ## install DCAM-SDK
 
