@@ -18,9 +18,15 @@ Install the latest `gcc`:
 
 Install the linux-headers: 
 
-  `sudo apt get linux-headers-4.15.0-1100-oem` (should be in this version when you boot the computer - ubuntu advanced option).
+  `sudo apt-get linux-headers-4.15.0-1100-oem` (should be in this version when you boot the computer - ubuntu advanced option).
+  
+Install the linux-image:
+  
+  `sudo apt-get linux-image-4.15.0-1100-oem`.
 
-Go to BIOS when rebooting, disable the `secutiry boot`, enable `legacy support`.
+Go to BIOS when rebooting, disable the `security boot`, enable `legacy support`, 
+
+some PCs only need to disable `security boot` and they don't need to enable `legacy support`.
 
 Follow the guidelines in the `README.txt` in the folder `api` to install all `install.sh` files in `api`, `api/driver/firebird`, and `api/runtime`.
 
