@@ -18,15 +18,27 @@ gcc --version
 
 if you don't have `gcc`, run
 
-  `sudo apt update` and `sudo apt install build-essential`.
+```
+sudo apt update
+``` 
+
+and 
+
+```sudo apt install build-essential```.
 
 ### Install the linux-headers: 
 
-  `sudo apt-get linux-headers-4.15.0-1100-oem` (should be in this version when you boot the computer - ubuntu advanced option).
+```
+sudo apt-get linux-headers-4.15.0-1100-oem
+``` 
   
 ### Install the linux-image:
   
-  `sudo apt-get linux-image-4.15.0-1100-oem`.
+```
+sudo apt-get linux-image-4.15.0-1100-oem
+```
+
+You should reboot your PC with this kernel version. It can be found in the GRUB menu - Ubuntu Advanced Option.
 
 ### BIOS setting
 
