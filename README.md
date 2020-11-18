@@ -24,7 +24,9 @@ sudo apt update
 
 and 
 
-```sudo apt install build-essential```.
+```
+sudo apt install build-essential
+```.
 
 ### Install the linux-headers: 
 
@@ -46,7 +48,7 @@ Go to BIOS when rebooting, disable the `security boot`, enable `legacy support`,
 
 some PCs only need to disable `security boot` and they don't need to enable `legacy support`.
 
-### running install.sh
+### Run install.sh
 
 Follow the guidelines in the `README.txt` in the folder `api` to install all `install.sh` files in `api`, `api/driver/firebird`, and `api/runtime`.
 
