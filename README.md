@@ -26,7 +26,7 @@ and
 
 ```
 sudo apt install build-essential
-```.
+```
 
 ### Install the linux-headers: 
 
