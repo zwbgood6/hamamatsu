@@ -10,7 +10,7 @@ Camara type: `C12300-321B`.
 
 Install the latest `gcc`: check gcc version
 
-```gcc --version```,
+``gcc --version``,
 
 if you don't have `gcc`, run
 
