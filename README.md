@@ -8,25 +8,33 @@ Linux version: `18.04` (don't use `20.04`).
 
 Camara type: `C12300-321B`.
 
-Install the latest `gcc`: check gcc version
+### Install the latest `gcc`
 
-``gcc --version``,
+check gcc version
+
+```
+gcc --version
+```
 
 if you don't have `gcc`, run
 
   `sudo apt update` and `sudo apt install build-essential`.
 
-Install the linux-headers: 
+### Install the linux-headers: 
 
   `sudo apt-get linux-headers-4.15.0-1100-oem` (should be in this version when you boot the computer - ubuntu advanced option).
   
-Install the linux-image:
+### Install the linux-image:
   
   `sudo apt-get linux-image-4.15.0-1100-oem`.
+
+### BIOS setting
 
 Go to BIOS when rebooting, disable the `security boot`, enable `legacy support`, 
 
 some PCs only need to disable `security boot` and they don't need to enable `legacy support`.
+
+### running install.sh
 
 Follow the guidelines in the `README.txt` in the folder `api` to install all `install.sh` files in `api`, `api/driver/firebird`, and `api/runtime`.
 
@@ -36,9 +44,9 @@ Read and follow the guidelines in the `FireBird_QuickStart_Linux.pdf` file in th
 
 intro: software development kit
 
-# DCAM API modules
+### DCAM API modules
 
-## initialization, termination, HDCAM handle
+#### initialization, termination, HDCAM handle
 
 - initialization
   - steps: begin DCAM-API and initialize driver -> get HDCAM handle for the device 
@@ -59,7 +67,7 @@ intro: software development kit
 - get the device and DCAM information 
   - dcamdev_getstring()
 
-## acquisition buffer control
+#### acquisition buffer control
 
 - allocation, attach, and release
   - allocation (prepare a receiving buffer):
@@ -70,7 +78,7 @@ intro: software development kit
   - dcambuf_lockframe(): return a pointer to the data so we can access the image
   - dcambuf_copyframe(): copy the image from primary buffer to reserved memory 
 
-## capture control
+#### capture control
 
 - start and stop capturing
   - allocate a buffer -> start decam capture -> stop decam capture
@@ -93,7 +101,7 @@ intro: software development kit
   - steps: prepare HDCAMREC handle -> call dcamcap_record() -> call dcamcap_start()
   - one time function: call dcamcap_record() again for another capturing
   
-## recording control
+#### recording control
 
 - prepare, start, and stop recording
   - open decam recording file -> call recoding function -> call dcam start function 
