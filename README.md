@@ -8,11 +8,11 @@ Linux version: `18.04` (don't use `20.04`).
 
 Camara type: `C12300-321B`.
 
-Install the latest `gcc`:
+Install the latest `gcc`: check gcc version
 
-  check gcc version: `gcc --version`,
+```gcc --version```,
 
-  if you don't have `gcc`, run
+if you don't have `gcc`, run
 
   `sudo apt update` and `sudo apt install build-essential`.
 
